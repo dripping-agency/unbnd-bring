@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--light-purple);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'circularStdBook', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--white);
+}
+
+
+h1,
+h2,
+h3,
+h5 {
+  font-family: 'circularStdBold', Arial, Helvetica, sans-serif; 
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+
+p {
+  margin: 0 0 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+strong {
+  font-family: 'circularStdBold', Arial, Helvetica, sans-serif; 
+}
+
+figure {
+  margin: 0;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 0.9em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+a {
+  color: var(--sand);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// UTILITIES
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+.gradient-box {
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+  $border: 3px;
+  background-color: var(--light-purple);
+  padding: 40px;
+  background-clip: padding-box;
+  border: solid $border transparent;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -$border;
+    background: linear-gradient(to right,#FFFD38, #FDAAEA);
+  }
+
+  .inner-container {
+    width: 100%;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 600px) {
+      max-width: 390px;
+    }  
+  }
+}
+
+.clearfix {
+  overflow: auto;
+
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.active {
+  display: block;
+}

@@ -1,0 +1,581 @@
+main {
+  overflow: hidden;
+  position: relative;
+
+}
+
+.container {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @media only screen and (min-width: 600px) {
+    max-width: 960px;
+  }  
+}
+
+.row {
+  margin: 0 -20px;
+
+  @media only screen and (min-width: 600px) {
+    display: flex;
+  }  
+
+  &.jc-center {
+    justify-content: center;
+  }
+
+  &.jc-space {
+    justify-content: space-between;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  .col {
+    padding: 0 20px;
+
+    &.col-1 {
+      flex: 1;
+    }
+
+    &.col-2 {
+      flex: 2;
+    }
+
+    &.col-3 {
+      flex: 3;
+    }
+  }
+}
+
+.square {
+  width: 15px;
+  height: 15px;
+  background-color: var(--white);
+  margin: 30px 0;
+}
+
+.section-header {
+  font-family: 'circularStdBlack', Arial, Helvetica, sans-serif;
+  font-size: 2.500em;
+  color: var(--yellow);
+  line-height: 1;
+  margin-bottom: 20px;
+
+  @media only screen and (min-width: 600px) {
+    font-size: 4.250em;
+   }
+
+  span {
+    font-family: 'circularStdBold', Arial, Helvetica, sans-serif;
+    display: block;
+    color:var(--white);
+    font-size: 0.353em;
+  }
+}
+
+.section {
+  padding: 25px 20px;
+  position: relative;
+
+  @media only screen and (min-width: 600px) {
+    padding: 75px 20px;
+  }  
+}
+
+.featured-text {
+  margin: 20px 0;
+  line-height: 1;
+  font-size: 1.250em;
+  span {
+    display: block;
+    font-size: 1.500em;
+    color: var(--yellow);
+  }
+}
+
+// ----- SECTIONS
+
+// Graphics 
+
+.graphics {
+  img {
+    position: absolute;
+  }
+
+  // teaser
+  .blue-ring {
+    left: 0;
+    bottom:20px;
+    width: 50px;
+
+    @media only screen and (min-width: 600px) {
+     bottom: 10px;
+      width: auto;
+    }
+  }
+
+  .sml-halfcircle-yellow {
+    right: 0;
+    top: 45%;
+    width: 66px;
+  }
+
+  //About
+  .big-yellow {
+    left: 0;
+    top: 100%;
+    width: 130px;
+
+    @media only screen and (min-width: 600px) {
+      top: 60%;
+    }
+  }
+
+  //sponsors
+  .triangle-yellow {
+    right: 0;
+    top: 70%;
+    width: 80px;
+
+    @media only screen and (min-width: 600px) {
+      top: 50%;
+    }
+  }
+
+  //tickets
+  .halfcircle-blue {
+    right: 0;
+    top: -80px;
+    width: 100px;
+
+    @media only screen and (min-width: 600px) {
+      top: -100px;
+    }
+  }
+
+  //agenda
+  .ring-pink {
+    position: relative;
+    margin-bottom: 50px;
+    width: 182px;
+  }
+  
+  .blue-ring,
+  .sml-halfcircle-yellow,
+  .big-yellow,
+  .triangle-yellow,
+  .halfcircle-blue,
+  .ring-pink {
+    @media only screen and (min-width: 600px) {
+      width: auto;
+    }  
+  }
+  
+}
+
+.section-teaser {
+  padding-top: 70px;
+  font-size: 1.250em;
+
+  @media only screen and (min-width: 600px) {
+    padding-top: 140px;
+    .row {
+      margin: 0 -70px;
+
+      .col {
+        padding: 0 70px;
+      }
+    }
+  }  
+
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    margin-bottom: 30px;
+  }
+  
+  .square {
+    margin: 40px 0 15px;
+  }
+
+  .btn-link {
+    display: none;
+    margin-top: 80px;  
+
+    @media only screen and (min-width: 600px) {
+      display: inline-block;
+    }
+    
+  }
+}
+
+// About
+
+.section-about-event {
+  .container {
+    @media only screen and (min-width: 600px) {
+      max-width: 660px;
+    }
+  }
+
+  .square {
+    width: 10px;
+    height: 10px;
+    margin: 50px 0 20px;
+  }
+}
+
+// Sponsors
+
+.section-sponsors {
+
+  .section-header {
+    margin-bottom: 35px;
+  }
+
+  .partners-group {
+    margin-bottom: 40px;
+    .col {
+      margin-bottom: 20px;
+
+      @media only screen and (min-width: 600px) {
+       margin-bottom: 8px;
+      }  
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media only screen and (min-width: 600px) {
+      flex-wrap: nowrap;
+
+    }
+
+    .col {
+      width: 50%;
+      text-align: center;
+
+      @media only screen and (min-width: 600px) {
+        width: auto;
+      }  
+    }
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+// Speakers 
+
+.section-speakers { 
+
+  .section-header {
+    margin-bottom: 50px;
+    text-align: center;
+
+    @media only screen and (min-width: 600px) {
+      text-align: left;
+     }
+  }
+
+  .row {    
+    @media only screen and (min-width: 600px) {
+     flex-wrap: wrap;
+    }
+
+  }
+}
+
+.speakers-wrapper {
+  height: 872px;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  @media only screen and (min-width: 600px) {
+    height: 436px;
+   }
+
+  &.show {
+    height: auto;
+  }
+}
+
+.speaker {
+  width: 280px;
+  margin:0 auto 20px;
+  position: relative;
+  text-align: center;
+
+  figure {
+    position: relative;
+
+    &::after{
+      pointer-events: none;
+      content: url(../images/img-graphic-profile.svg);
+      display: block;
+      position: absolute;
+      right: 5px;
+      top: 55%;
+    }
+  }
+
+  .name {
+    margin: 0 0 8px;
+    font-size: 1.750em;
+  }
+
+  .desc {
+    max-width: 220px;
+    margin: 0 auto 10px;
+  }
+}
+
+// Tickets
+
+.section-tickets {
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .wrapper {
+    max-width: 520px;
+    margin: 0 auto 50px;
+  }
+}
+
+.toggle-form {
+
+  ul {
+    list-style: none;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #8A6799;
+    font-size: 12px;
+
+    @media only screen and (min-width: 600px) {
+      font-size: inherit;
+      justify-content: space-between;
+    }  
+
+    li {
+
+      > a {
+        display: block;
+        border-radius: 8px;
+        padding: 8px 10px;
+        color: var(--white);
+        text-decoration: none;
+        background-color: #8A6799;
+
+        &.active {
+          background-color: var(--green);
+        }
+      }  
+    }
+  }
+
+}
+
+.toggle-content {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+} 
+
+// Agenda
+
+.section-agenda {
+
+  .row {
+    margin: 0 -9px;
+    > .col {
+      padding: 0 9px;
+
+      @media only screen and (min-width: 600px) {
+        width: 50%;
+      }
+    }
+  }
+
+  .gradient-box {
+    padding: 10px 20px;
+  }
+
+  .accordion {
+    height: 356px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    
+    &.show {
+      height: auto;
+    }
+
+  }
+
+}
+
+.agenda-item {
+  flex: 1;
+  
+  .agenda-header,
+  .agenda-footer {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+  }
+
+  .agenda-header {
+    grid-template-areas: 
+    "time type"; 
+    margin-bottom: 10px;
+  }
+
+  .agenda-footer {
+    grid-template-areas: 
+    "company toggle"; 
+    margin: 10px 0 0;
+  }
+
+  .time,
+  .type,
+  .company {
+    color: var(--yellow);
+    align-self: center; 
+  }
+  .time { 
+    grid-area: time; 
+  }
+  .type { 
+    grid-area: type; 
+    justify-self: end; 
+    font-size: 0.750em;
+  }
+
+  .company {
+    grid-area: company;
+    text-transform: uppercase;
+  }
+
+  .toggle {
+    grid-area: toggle;
+    justify-self: end; 
+  }
+
+  .agenda-title {
+    h4{
+      margin: 0 0 5px;
+      font-size: 1.250em;
+    }
+  }
+
+  .agenda-body {
+    border-top: 1px solid var(--yellow);
+    padding-top: 15px;
+    margin-top: 10px;
+  }
+
+  .toggle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: var(--green);
+    
+    &,
+    * {
+      transition: all .275s ease-in-out;
+    }
+
+    span {
+      position: absolute;
+      background-color: var(--light-purple);
+      display: block;
+      width: 3px;
+      pointer-events: none;
+      
+      &:first-child {
+        height: 3px;
+        top: 4px;
+        left: 9px;
+      }
+
+      &:last-child {
+        height: 6px;
+        left: 9px;
+        top: 10px;
+      }
+
+    }
+  }
+
+}
+
+.accordion {
+
+  .accordion-toggle {
+    cursor: pointer;
+  }
+
+  .accordion-panel {
+    margin-bottom: 20px;
+
+    .accordion-body {
+      display: none;
+    }  
+  
+    &.accordion-expanded {
+      .accordion-body {
+        display: block;
+      }
+
+ 
+      .toggle {
+        border-radius: 20px;
+        width: 22px;
+        height: 22px;
+    
+        span {
+          background-color: var(--white);
+          width: 1px;
+          
+          &:first-child,
+          &:last-child {
+            height: 12px;
+            left: 11px;
+            top: 5px;
+          }
+
+          &:first-child {
+            transform: rotate(45deg);
+          }
+
+          &:last-child {
+            transform: rotate(-45deg);
+          }
+
+    
+        }
+      }      
+
+    }
+  }
+}
+

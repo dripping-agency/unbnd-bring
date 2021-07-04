@@ -1,0 +1,141 @@
+.header {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  transition: all .275s ease-in-out;
+  overflow: hidden;
+  display: none;
+
+  &::before {
+    content: '';
+    display: block;
+    background-color: rgba(#000, .55);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &.show-menu {
+    display: block;
+  }
+
+
+  @media only screen and (min-width: 600px) {
+    display: block;
+    height: 90px; 
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(#fff, .1);
+    transform: translate(0, -100%);
+
+    &::before {
+      display: none;
+    }
+
+    &.show-nav {
+      transform: translate(0,0);
+    }
+  }  
+
+}
+
+.brand {
+  display: none;
+  float: left;
+  margin-top: 20px;
+  margin-left: 40px;
+
+  @media only screen and (min-width: 600px) {
+    display: block;
+  }  
+}
+
+.navigation {
+  position: relative;
+  z-index: 2;
+  background-color: var(--white);
+  padding: 20px 20px 10px;
+  box-shadow: 0 0 6px rgba(#000, .5);
+
+  @media only screen and (min-width: 600px) {
+    float: right;
+    margin-top: 27px;
+    margin-right: 24px;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }  
+
+  > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0 0 10px;
+      line-height: 1;
+
+      @media only screen and (min-width: 600px) {
+        float: left;
+        margin:0 15px;
+      }  
+
+    }
+
+    a {
+      display: block;
+      padding: 12px 2px;
+      color: var(--purple);
+      text-decoration: none;
+
+      @media only screen and (min-width: 600px) {
+        color: var(--white);
+      }  
+    }
+  }
+}
+
+.btn-menu-toggle {
+  border: none;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  position: fixed;
+  appearance: none;
+  top: 10px;
+  right: 20px;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 100;
+
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+
+  span {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: var(--white);
+    left: 10px;
+
+    &.top {
+      top: 10px;
+    }
+
+    &.mid {
+      top: 24px;
+    }
+
+    &.bot {
+      top: 38px;
+    }
+
+  }
+}
